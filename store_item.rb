@@ -15,26 +15,14 @@ class Items
     @price = options[:price]
   end
 
-  def color
-    @color
-  end
-
-  def size
-    @size
-  end
-
-  def price
-    @price
-  end
-
   def print_item
-    puts "This Yoyo is #{size} #{color} costing #{price} dollars"
+    puts "This is a #{size} #{color} Yoyo costing #{price} dollars"
   end
 end
 
-yoyo1 = Items.new("green", "small", 10)
-yoyo2 = Items.new("blue", "medium", 20)
-yoyo3 = Items.new("red", "large", 30)
+yoyo1 = Items.new({ color: "green", size: "small", price: 10 })
+yoyo2 = Items.new({ color: "blue", size: "medium", price: 20 })
+yoyo3 = Items.new({ color: "red", size: "large", price: 30 })
 
 yoyo1.print_item
 yoyo2.print_item
