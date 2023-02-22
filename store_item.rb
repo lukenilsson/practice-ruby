@@ -24,6 +24,10 @@ yoyo1 = Items.new({ color: "green", size: "small", price: 10 })
 yoyo2 = Items.new({ color: "blue", size: "medium", price: 20 })
 yoyo3 = Items.new({ color: "red", size: "large", price: 30 })
 
+puts yoyo1.color
+puts yoyo1.size
+puts yoyo1.price
+
 yoyo1.print_item
 yoyo2.print_item
 yoyo3.print_item
