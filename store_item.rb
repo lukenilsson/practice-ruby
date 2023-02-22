@@ -1,7 +1,41 @@
-yoyo1 = { color: "green", size: "small", price: 10 }
-yoyo2 = { color: "blue", size: "medium", price: 20 }
-yoyo3 = { :color => "red", :size => "large", :price => 30 }
+# yoyo1 = { color: "green", size: "small", price: 10 }
+# yoyo2 = { color: "blue", size: "medium", price: 20 }
+# yoyo3 = { :color => "red", :size => "large", :price => 30 }
 
-puts yoyo1
-puts yoyo2
-puts yoyo3
+# puts yoyo1
+# puts yoyo2
+# puts yoyo3
+
+class Items
+  attr_accessor :color, :size, :price
+
+  def initialize(options)
+    @color = options[:color]
+    @size = options[:size]
+    @price = options[:price]
+  end
+
+  def color
+    @color
+  end
+
+  def size
+    @size
+  end
+
+  def price
+    @price
+  end
+
+  def print_item
+    puts "This Yoyo is #{size} #{color} costing #{price} dollars"
+  end
+end
+
+yoyo1 = Items.new("green", "small", 10)
+yoyo2 = Items.new("blue", "medium", 20)
+yoyo3 = Items.new("red", "large", 30)
+
+yoyo1.print_item
+yoyo2.print_item
+yoyo3.print_item
