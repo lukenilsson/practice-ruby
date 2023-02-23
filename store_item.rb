@@ -1,13 +1,9 @@
-# yoyo1 = { color: "green", size: "small", price: 10 }
-# yoyo2 = { color: "blue", size: "medium", price: 20 }
-# yoyo3 = { :color => "red", :size => "large", :price => 30 }
 
-# puts yoyo1
-# puts yoyo2
-# puts yoyo3
+require "./store_module.rb"
 
 class Items
   attr_accessor :color, :size, :price
+  include GreeterMessage
 
   def initialize(options)
     @color = options[:color]
@@ -19,15 +15,3 @@ class Items
     puts "This is a #{size} #{color} Yoyo costing #{price} dollars"
   end
 end
-
-yoyo1 = Items.new({ color: "green", size: "small", price: 10 })
-yoyo2 = Items.new({ color: "blue", size: "medium", price: 20 })
-yoyo3 = Items.new({ color: "red", size: "large", price: 30 })
-
-puts yoyo1.color
-puts yoyo1.size
-puts yoyo1.price
-
-yoyo1.print_item
-yoyo2.print_item
-yoyo3.print_item
